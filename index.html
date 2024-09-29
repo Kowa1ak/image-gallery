@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <a class="logo">
+            <svg width="40" height="40">
+              <use href="./assets/sprite.svg#icon-camera"></use>
+            </svg>
+            <span class="logo__name">Unsplash API</span>
+          </a>
+          <form id="form" autocomplete="off" class="form">
+            <div class="form__field">
+              <input
+                id="query"
+                type="text"
+                name="query"
+                placeholder=" "
+                class="form__input"
+                autofocus
+              />
+              <label for="query" class="form__label">Search pictures</label>
+            </div>
+            <div class="form__button">
+              <button type="reset" class="form__close">
+                <svg width="20" height="20">
+                  <use href="./assets/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+              <button class="form__search">
+                <svg width="24" height="24">
+                  <use href="./assets/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="gallery">
+        <div class="container">
+          <ul id="gallery" class="gallery__list"></ul>
+          <div id="guard" class="guard"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="https://github.com/Kowa1ak">
+              <svg width="48" height="48">
+                <use href="./assets/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="https://rs.school/courses/javascript-preschool-ru"
+            >
+              <svg width="120" height="40">
+                <use href="./assets/sprite.svg#icon-rs_school_js"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__rights">&#169; 2024 All rights reserved</p>
+      </div>
+    </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="modal__button">
+          <svg width="24" height="24">
+            <use href="./assets/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
